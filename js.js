@@ -1,5 +1,5 @@
-const cities = [353412, 352954, 353981];
-const apikey = 'gHuEn9ghiy20CHSHAJ4ccgWcdU0XWkGS';
+const cities = [353412];
+const apikey = 'l54dxP71pwauzBCp3Gnr1l3V1wJGk622';
 
 Vue.component('weather-day', {
   props: ['day', 'mode'],
@@ -124,7 +124,7 @@ var app = new Vue({
   },
   methods: {
     fetch_data() {
-      let url = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/' + this.city_key;
+      let url = 'https://developer.accuweather.com/accuweather-forecast-api/apis/get/forecasts/v1/daily/5day/%7BlocationKey%7D' + this.city_key;
       let param = '?language=vi&apikey=' + apikey;
       fetch(url + param)
         .then(res => {
